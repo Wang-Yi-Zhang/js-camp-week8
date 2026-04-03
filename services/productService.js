@@ -43,7 +43,7 @@ async function getProductById(productId) {
  */
 async function getCategories() {
   // 請實作此函式
-  // 提示：使用 fetchProducts() 取得所有產品後，以及 utils getAllCategories()
+  // 提示：使用 fetchProducts() 取得所有產品後，代入到 utils getAllCategories()
 }
 
 /**
@@ -53,7 +53,7 @@ async function getCategories() {
 function displayProducts(products) {
   // 請實作此函式
   // 提示：使用 forEach 遍歷產品陣列，依序輸出每筆產品資訊
-  // 使用 utils getDiscountRate() 計算折扣率，以及 utils formatCurrency() 格式化金額
+  // 會使用到 utils getDiscountRate() 計算折扣率，以及 utils formatCurrency() 格式化金額
   //
   // 預期輸出格式：
   // 產品列表：

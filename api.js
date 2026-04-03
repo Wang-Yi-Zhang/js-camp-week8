@@ -13,11 +13,12 @@ const { API_PATH, BASE_URL, ADMIN_TOKEN } = require('./config');
  */
 async function fetchProducts() {
   // 請實作此函式
+  // 回傳 response.data.products
 }
 
 /**
  * 取得購物車
- * @returns {Promise<Object>}
+ * @returns {Promise<Object>} - 回傳 { carts: [...], total: 數字, finalTotal: 數字 }
  */
 async function fetchCart() {
   // 請實作此函式
@@ -27,7 +28,7 @@ async function fetchCart() {
  * 加入購物車
  * @param {string} productId - 產品 ID
  * @param {number} quantity - 數量
- * @returns {Promise<Object>}
+ * @returns {Promise<Object>} - 回傳購物車資料
  */
 async function addToCart(productId, quantity) {
   // 請實作此函式
@@ -37,7 +38,7 @@ async function addToCart(productId, quantity) {
  * 更新購物車商品數量
  * @param {string} cartId - 購物車項目 ID
  * @param {number} quantity - 新數量
- * @returns {Promise<Object>}
+ * @returns {Promise<Object>} - 回傳購物車資料
  */
 async function updateCartItem(cartId, quantity) {
   // 請實作此函式
@@ -46,7 +47,7 @@ async function updateCartItem(cartId, quantity) {
 /**
  * 刪除購物車商品
  * @param {string} cartId - 購物車項目 ID
- * @returns {Promise<Object>}
+ * @returns {Promise<Object>} - 回傳購物車資料
  */
 async function deleteCartItem(cartId) {
   // 請實作此函式
@@ -54,7 +55,7 @@ async function deleteCartItem(cartId) {
 
 /**
  * 清空購物車
- * @returns {Promise<Object>}
+ * @returns {Promise<Object>} - 回傳購物車資料
  */
 async function clearCart() {
   // 請實作此函式
@@ -72,7 +73,15 @@ async function createOrder(userInfo) {
 // ========== 管理員 API ==========
 
 /**
- * 取得訂單列表（需認證）
+ * 管理員 API 需加上認證
+ * 提示：
+    headers: {
+      authorization: ADMIN_TOKEN
+    }
+ */
+
+/**
+ * 取得訂單列表
  * @returns {Promise<Array>}
  */
 async function fetchOrders() {

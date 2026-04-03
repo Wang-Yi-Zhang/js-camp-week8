@@ -73,15 +73,15 @@ async function removeOrder(orderId) {
  * @returns {Object} - 格式化後的訂單
  *
  * 回傳物件包含以下欄位：
- * - id: 訂單 ID（原始）
- * - user: 使用者資料（原始）
- * - products: 商品陣列（原始）
+ * - id: 訂單 ID
+ * - user: 使用者資料
+ * - products: 商品陣列
  * - total: 總金額（原始數字）
  * - totalFormatted: 格式化金額，使用 utils formatCurrency()
- * - paid: 付款狀態（原始布林值）
+ * - paid: 付款狀態（布林值）
  * - paidText: 付款狀態文字，true → '已付款'，false → '未付款'
  * - createdAt: 格式化後的建立時間，使用 utils formatDate()
- * - daysAgo: 距今天數文字，使用 utils getDaysAgo()
+ * - daysAgo: 距離今天為幾天前，使用 utils getDaysAgo()
  */
 function formatOrder(order) {
   // 請實作此函式
@@ -111,7 +111,7 @@ function displayOrders(orders) {
   // 建立時間：2024-01-01 (3 天前)
   // ----------------------------------------
   // 商品明細：
-  //   - 產品名稱 x 2
+  //   - 產品名稱 x 2（產品數量）
   // ========================================
 }
 
