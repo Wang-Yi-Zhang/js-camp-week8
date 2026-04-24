@@ -37,8 +37,8 @@ function formatDate(timestamp) {
  * @returns {string} - 例如 '3 天前'
  */
 function getDaysAgo(timestamp) {
-  const today = dayjs();
-  const orderDate = dayjs.unix(timestamp);
+  const today = dayjs().startOf('day');
+  const orderDate = dayjs.unix(timestamp).startOf('day');
   const diffDays = today.diff(orderDate, 'day');
 
   if (diffDays === 0) return '今天';
