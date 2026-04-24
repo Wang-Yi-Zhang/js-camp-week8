@@ -1,6 +1,14 @@
+# 系統與環境相關
 .DS_Store
+.env
+.env.local
+.env.*.local
+
+# 編輯器與工具
+.vscode/
 app.log
-.vscode/        
-node_modules/   
-build/          
-dist/           
+
+# 依賴套件與打包產出
+node_modules/
+build/
+dist/ 
